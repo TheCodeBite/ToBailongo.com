@@ -1,0 +1,51 @@
+[debug] [2019-10-31T16:10:54.924Z] ----------------------------------------------------------------------
+[debug] [2019-10-31T16:10:54.926Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init functions
+[debug] [2019-10-31T16:10:54.926Z] CLI Version:   7.6.2
+[debug] [2019-10-31T16:10:54.926Z] Platform:      linux
+[debug] [2019-10-31T16:10:54.926Z] Node Version:  v12.12.0
+[debug] [2019-10-31T16:10:54.927Z] Time:          Thu Oct 31 2019 10:10:54 GMT-0600 (GMT-06:00)
+[debug] [2019-10-31T16:10:54.927Z] ----------------------------------------------------------------------
+[debug] [2019-10-31T16:10:54.927Z] 
+[debug] [2019-10-31T16:10:54.934Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-31T16:10:54.934Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/alejandro/Documentos/ToBailongo/tobailango
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using tobailongo.
+[debug] [2019-10-31T16:10:54.943Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/tobailongo  
+ 
+[debug] [2019-10-31T16:10:55.368Z] <<< HTTP RESPONSE 403
+[debug] [2019-10-31T16:10:55.369Z] <<< HTTP RESPONSE BODY
+[debug] [2019-10-31T16:10:55.371Z] HTTP Error: 403, The caller does not have permission
+[debug] [2019-10-31T16:10:55.547Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:39:35)
+    at Request.self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:476:20)
+    at Request.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1161:10)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:476:20)
+    at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:1083:12)
+    at Object.onceWrapper (events.js:299:28)
+[error] 
+[error] Error: Failed to get Firebase project tobailongo. Please make sure the project exists and your account has permission to access it.

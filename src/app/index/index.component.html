@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="mx-auto col-sm-9 col-md-7 col-lg-6" style="padding-top: 2em">
+        <div class="card mb-3">
+            <div class="bg-dark text-white">
+                <img src="../../assets/portada-registro.jpg" class="card-img-top" style="center center/cover no-repeat;">
+                <div class="card-img-overlay">
+                    <h2 class="card-title">Registrate</h2>
+                    <p class="card-text">Es fácil y rápido.</p>
+                </div>
+            </div>
+
+            <div class="card-body card-login">
+                <form [formGroup]="formRegiter" (submit)="onSubmit(formRegiter)">
+                    <div class="form-row">
+                        <div class="input-field col s12">
+                            <input id="last_name" type="text" class="validate" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                            <label for="last_name">Nombre(s):</label>
+
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Campo requerido</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                    
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate" formControlName="apellidoPaterno" [ngClass]="{ 'is-invalid': submitted && f.apellidoPaterno.errors }">
+                            <label for="last_name">Apellido Paterno</label>
+                            
+                            <div *ngIf="submitted && f.apellidoPaterno.errors" class="invalid-feedback">
+                                <div *ngIf="f.apellidoPaterno.errors.required">Campo requerido</div>
+                            </div>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate" formControlName="apellidoMaterno" [ngClass]="{ 'is-invalid': submitted && f.apellidoMaterno.errors }">
+                            <label for="last_name">Apellido Materno</label>
+
+                            <div *ngIf="submitted && f.apellidoMaterno.errors" class="invalid-feedback">
+                                <div *ngIf="f.apellidoMaterno.errors.required">Campo requerido</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input-field col s6">
+                            <input id="email" type="email" class="validate" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                            <label for="email">Correo: </label>
+
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Correo requerido</div>
+                                <div *ngIf="f.email.errors.email">Correo invalido</div>
+                            </div>
+                        </div>
+                        
+                        <div class="input-field col s6">
+                            <input id="email" type="tel" class="validate" formControlName="tel" [ngClass]="{ 'is-invalid': submitted && f.tel.errors }">
+                            <label for="email">Telfono</label>
+
+                            <div *ngIf="submitted && f.tel.errors" class="invalid-feedback">
+                                <div *ngIf="f.tel.errors.required">Campo requerido</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                            <div class="input-field col s6">
+                                <label>Contraseña:</label>
+                                <input type="password" formControlName="password" class="form-control form-control-sm" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">Contraseña requerida</div>
+                                    <div *ngIf="f.password.errors.minlength">La contraseña debe tener minimo 8 caracteres</div>
+                                </div>
+                            </div>
+                            
+                            <div class="input-field col s6">
+                                <label>Repetir contraseña:</label>
+                                <input class="form-control form-control-sm" formControlName="repeatpassword" type="password" [ngClass]="{ 'is-invalid': submitted && f.repeatpassword.errors }">
+                                <div *ngIf="submitted && f.repeatpassword.errors" class="invalid-feedback">
+                                    <div *ngIf="f.repeatpassword.errors.required">Confirme su contraseña</div>
+                                    <div *ngIf="f.repeatpassword.errors.minlength">La contraseña debe tener minimo 8 caracteres</div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="form-row">
+                        <div class="input-field col s12">
+                            <button type="submit" class="btn btn-primary btn-sm btn-lg btn-block">Registrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

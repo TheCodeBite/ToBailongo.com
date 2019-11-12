@@ -1,0 +1,29 @@
+<div *ngIf="showalert" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Hola: </strong> Tu cuenta ha sido registrada con exito; Para poder acceder necesitar validar tu cuenta
+  desde el link que se te envio al correo: {{correo}}
+  <button type="button" class="close" (click)="close()" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="container">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" style="margin-top: 10%;">
+        <div class="card card-login my-5">
+            <h4 class="card-header" style="text-align: center;">Iniciar Sesión</h4>
+            <div class="card-body">
+                <div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <input type="email" [(ngModel)]="correo" class="form-control campo" placeholder="correo">
+                    
+                        <label>Contraseña (</label> <a href="/forgot_password"> olvide mi contraseña</a>)   
+                        <input type="password" [(ngModel)]="contrasena" class="form-control campo" placeholder="contraseña"> 
+                    
+                        <button type="submit" class=" campo btn btn-success btn-sm btn-block" (click)="login()">Iniciar Sesión</button>
+                
+                        <p>¿no tienes cuenta? <a href="/register"> Registrarme</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
